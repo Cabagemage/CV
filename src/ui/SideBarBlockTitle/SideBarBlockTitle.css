@@ -1,0 +1,3 @@
+.typewriter__text {
+  @apply text-2xl w-[100%] text-white font-bold;
+}

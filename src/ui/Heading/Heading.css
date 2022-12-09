@@ -1,0 +1,11 @@
+.heading {
+  @apply flex flex-col gap-4 self-start;
+}
+
+.heading__title {
+  @apply text-5xl font-medium;
+}
+
+.heading__subtitle {
+  @apply text-3xl;
+}
