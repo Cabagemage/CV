@@ -3,6 +3,10 @@
     "browser": true,
     "es2021": true
   },
+  "parserOptions": {
+    "project": ["./tsconfig.json"],
+    "extraFileExtensions": [".astro"]
+  },
   "extends": [
     "plugin:astro/recommended",
     "eslint:recommended",
@@ -14,6 +18,24 @@
     "airbnb-typescript",
     "prettier"
   ],
+  "rules": {
+    "react/require-default-props": "off",
+    "import/prefer-default-export": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/function-component-definition": "off",
+    "react/no-unknown-property": [
+      "error",
+      {
+        "ignore": ["is:global"]
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".astro", ".tsx"]
+      }
+    ]
+  },
   "overrides": [
     {
       // Define the configuration for `.astro` file.
