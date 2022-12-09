@@ -1,0 +1,11 @@
+.tags {
+  @apply flex flex-col mt-8 items-start;
+}
+
+.tags__typeWriter {
+  @apply text-2xl w-[100%] text-white font-bold mb-4;
+}
+
+.tags__tags {
+  @apply flex flex-wrap gap-4;
+}
