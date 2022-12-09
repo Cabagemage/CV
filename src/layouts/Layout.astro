@@ -1,8 +1,9 @@
 ---
+import { SideBar } from "../components/Sidebar";
+
 export interface Props {
   title: string;
 }
-import { SideBar } from "../components/Sidebar";
 const { title } = Astro.props;
 ---
 
@@ -16,7 +17,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="flex mt-5">
-    <div class="absolute top-0 w-[100%] h-[16px] bg-sidebar" />
+    <div class="absolute top-0 w-[100%] h-[16px] bg-sidebar"></div>
     <SideBar />
     <slot />
   </body>

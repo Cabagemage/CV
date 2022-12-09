@@ -1,49 +1,44 @@
-# Welcome to [Astro](https://astro.build)
+# my CV
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
+## Used technologies
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+1. [Astro](https://astro.build) - I prefer to use astro for server side rendering. It provides ability to create Multi-page applications much more faster and optimized than Next.JS.
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+2. [React](https://reactjs.org) - React JS as package to build reactive components for complex ui elements.
 
-## 🚀 Project Structure
+3. [Tailwind](https://tailwindcss.com) - atomic CSS framework to ease work with styles. Its pretty optimized and fast
 
-Inside of your Astro project, you'll see the following folders and files:
+4. [Hygen](https://www.hygen.io/) - code generator to make templates of components or ui entities.
+
+## Code Quality instruments
+
+I prefer to use Typescript and eslint to make typescript more strict.  
+Also I like to use .github actions to control code quality.
+
+## Project structure
+
+\_templates - directory for hygen templates. To use templates you can write command hygen to get available actions. In few words you should write
 
 ```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+hygen component new
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+to create component, and
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```
+hygen ui new
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+to create ui elemement.
 
-## 🧞 Commands
+src contains 4 main directories.
 
-All commands are run from the root of the project, from a terminal:
+components: this directory contains .tsx or .astro components, that based on ui elements.
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
+ui: this directory contains main bricks of application. Its main ui elements, like buttons, inputs, etc.
 
-## 👀 Want to learn more?
+pages & layouts: this directories described in astro documentation
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Used environment variables
+
+There is no environment variables.
