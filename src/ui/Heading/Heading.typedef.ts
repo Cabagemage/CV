@@ -1,3 +1,1 @@
-export type HeadingProps = {
-
-}
+export type HeadingProps = {};

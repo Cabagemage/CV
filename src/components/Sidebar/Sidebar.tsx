@@ -1,5 +1,6 @@
 import { Avatar } from "../../ui";
 import { Contacts } from "../../components/Contacts";
+import { contacts } from "../Contacts/Contacts.data";
 
 export const SideBar = () => {
   const avatarSrc =
@@ -7,7 +8,7 @@ export const SideBar = () => {
   return (
     <aside className="bg-sidebar w-[355px] h-[100vh] flex  flex-col p-6 rounded-tr-[16px]">
       <Avatar avatarSrc={avatarSrc} className="self-center" />
-      <Contacts />
+      <Contacts contacts={contacts} />
     </aside>
   );
 };

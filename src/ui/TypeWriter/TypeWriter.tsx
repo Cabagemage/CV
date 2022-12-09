@@ -1,15 +1,13 @@
 import "./typeWriter.css";
-import classNames from "classnames"
+import classNames from "classnames";
 type TypeWriterProps = {
   text: string;
-  className?: HTMLHeadingElement["className"]
+  className?: HTMLHeadingElement["className"];
 };
 export const TypeWriter = ({ text, className }: TypeWriterProps) => {
   return (
     <div className="typewriter">
-      <h2 className={classNames("typewriter__text", className)} >
-        {text}
-      </h2>
+      <h2 className={classNames("typewriter__text", className)}>{text}</h2>
     </div>
   );
 };
