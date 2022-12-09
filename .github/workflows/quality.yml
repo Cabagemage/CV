@@ -1,0 +1,74 @@
+name: Quality Assurance
+
+on: pull_request
+
+jobs:
+  Prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Cache dependencies
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: ./.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+
+      - name: Install npm dependencies
+        run: npm ci --prefer-offline --cache=./.npm
+
+      - name: Run prettier check
+        run: npx prettier --check .
+  ESLint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Cache dependencies
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: ./.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+
+      - name: Install npm dependencies
+        run: npm ci --prefer-offline --cache=./.npm
+
+      - name: Run eslint check
+        run: npx eslint . --max-warnings 0
+  CommitLint:
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Fetch base
+        run: git fetch --no-tags origin $GITHUB_BASE_REF:$GITHUB_BASE_REF
+
+      - name: Fetch current
+        run: git fetch --no-tags origin $GITHUB_HEAD_REF:$GITHUB_HEAD_REF
+
+      - name: Run commitlint
+        uses: wagoid/commitlint-github-action@v4.1.12
+        with:
+          configFile: .commitlintrc.json

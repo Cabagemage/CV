@@ -3,13 +3,14 @@ type AvatarProps = {
   className?: HTMLDivElement["className"];
 };
 
-export const Avatar = ({ className, avatarSrc }: AvatarProps) => {
+export function Avatar({ className, avatarSrc }: AvatarProps) {
   return (
     <div className={className}>
       <img
         className="rounded-[50%] w-[290px] h-[269px] overflow-hidden"
+        alt="avatar"
         src={avatarSrc}
       />
     </div>
   );
-};
+}

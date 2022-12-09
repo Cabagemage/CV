@@ -61,8 +61,8 @@ module.exports = {
         xs: "12px",
       },
       screens: {
-        desktop: '1240px',
-        smallMobile: { max: '375px' },
+        desktop: "1240px",
+        smallMobile: { max: "375px" },
         tablet: { max: "1239px", min: "376px" },
       },
     },
