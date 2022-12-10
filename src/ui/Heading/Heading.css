@@ -1,5 +1,5 @@
 .heading {
-  @apply flex flex-col gap-4 self-start;
+  @apply flex flex-col gap-4 self-start w-[100%] justify-start;
 }
 
 .heading__title {

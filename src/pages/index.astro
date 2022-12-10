@@ -1,20 +1,34 @@
 ---
+import { Contacts, SideBar, Tags, WorkPlaces } from "../components";
 import Layout from "../layouts/Layout.astro";
-import { Heading } from "../ui/Heading";
+import { Avatar, Heading } from "../ui";
+import { proffessionalTools, industryKnowledge } from "../utils";
+import { contacts } from "../components/Contacts/Contacts.data";
+import { workPlaces } from "../utils";
+import { Achievements } from "../components/Achievements";
+const avatarSrc =
+  "https://sun9-86.userapi.com/impg/fqQ54TsGMi39bU0aW_LDMtXoyNe_z15WoF3nag/uQ7_ALjbwSg.jpg?size=1442x1920&quality=96&sign=dbf525a656463b266cc7e271ebab4f6a&type=album";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="flex items-start justify-start h-[100vh] w-[100vw]">
-    <Heading title="Андрей Зайцев" subtitle="26 лет, Front-End Developer" />
+  <SideBar className={"w-[355px]"}>
+    <Avatar avatarSrc={avatarSrc} className="self-center" />
+    <Contacts contacts={contacts} />
+    <Tags tags={proffessionalTools} typeWriterText="<Инструменты />" />
+    <Tags tags={industryKnowledge} typeWriterText="<Знания />" />
+  </SideBar>
+  <main class="flex items-start justify-start h-[100vh] flex-col p-10">
+    <section class="flex self-center mb-10">
+      <Heading title="Андрей Зайцев" subtitle="26 лет, Front-End Developer" />
+    </section>
+    <section>
+      <WorkPlaces workPlaces={workPlaces} />
+    </section>
   </main>
+  <SideBar className={"w-[250px]"}><Achievements /></SideBar>
 </Layout>
 
 <style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
-  }
   h1 {
     font-size: 3rem;
     font-weight: 800;

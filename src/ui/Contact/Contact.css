@@ -1,9 +1,5 @@
 .contact {
-  @apply w-[140px] flex p-4 items-center text-xl;
-}
-
-.contact:last-child {
-  @apply w-[296px] justify-center self-center;
+  @apply w-[100%] h-[36px] flex p-4 items-center text-m;
 }
 
 .contact__theme_mail {
