@@ -8,6 +8,7 @@ export const Contacts: FC<ContactsProps> = ({ contacts }) => (
     <div className="flex gap-4 flex-col w-[100%]">
       {contacts.map((item) => (
         <Contact
+          key={item.text}
           text={item.text}
           iconSrc={item.iconSrc}
           theme={item.theme}

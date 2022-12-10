@@ -1,18 +1,17 @@
 ---
 import { Contacts, SideBar, Tags, WorkPlaces } from "../components";
+import { SideBar } from "../components/SideBar";
 import Layout from "../layouts/Layout.astro";
 import { Avatar, Heading } from "../ui";
 import { proffessionalTools, industryKnowledge } from "../utils";
 import { contacts } from "../components/Contacts/Contacts.data";
 import { workPlaces } from "../utils";
 import { Achievements } from "../components/Achievements";
-const avatarSrc =
-  "https://sun9-86.userapi.com/impg/fqQ54TsGMi39bU0aW_LDMtXoyNe_z15WoF3nag/uQ7_ALjbwSg.jpg?size=1442x1920&quality=96&sign=dbf525a656463b266cc7e271ebab4f6a&type=album";
 ---
 
 <Layout title="Welcome to Astro.">
   <SideBar className={"w-[355px]"}>
-    <Avatar avatarSrc={avatarSrc} className="self-center" />
+    <Avatar className="self-center" />
     <Contacts contacts={contacts} />
     <Tags tags={proffessionalTools} typeWriterText="<Инструменты />" />
     <Tags tags={industryKnowledge} typeWriterText="<Знания />" />
