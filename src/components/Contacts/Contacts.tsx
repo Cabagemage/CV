@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import type { ContactsProps } from "./Contacts.typedef";
-import { Contact, SideBarBlockTitle } from "../../ui";
+import Contact from "../../ui/Contact";
+import SideBarBlockTitle from "../../ui/SideBarBlockTitle";
 
 export const Contacts: FC<ContactsProps> = ({ contacts }) => (
   <div className="flex flex-col gap-4  justify-center items-start mt-8">

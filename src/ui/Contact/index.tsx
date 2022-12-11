@@ -5,7 +5,7 @@ import type { ContactProps } from "./Contact.typedef";
 
 import "./Contact.css";
 
-export const Contact: FC<ContactProps> = ({ iconSrc, text, theme, link }) => (
+const Contact: FC<ContactProps> = ({ iconSrc, text, theme, link }) => (
   <a
     className={classNames(
       "contact items-center rounded-[8px]",
@@ -23,3 +23,5 @@ export const Contact: FC<ContactProps> = ({ iconSrc, text, theme, link }) => (
     <p>{text}</p>
   </a>
 );
+
+export default Contact;

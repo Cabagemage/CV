@@ -5,7 +5,7 @@ type SideBarProps = {
   className?: string;
 };
 
-export const SideBar: FC<SideBarProps> = ({ children, className }) => {
+const SideBar: FC<SideBarProps> = ({ children, className }) => {
   return (
     <aside
       className={`bg-sidebar h-[100vw] flex flex-shrink-0  flex-col p-6  ${className}`}
@@ -14,3 +14,5 @@ export const SideBar: FC<SideBarProps> = ({ children, className }) => {
     </aside>
   );
 };
+
+export default SideBar;

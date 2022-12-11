@@ -1,12 +1,16 @@
 ---
-import { Avatar, Heading } from "../ui";
-import {SideBar, Contacts, Tags} from "../components";
+import Avatar from "../ui/Avatar";
+import Heading from "../ui/Heading";
+import SideBar from "../components/SideBar";
+import Contacts from "../components/Contacts";
+import Tags from "../components/Tags";
 import { proffessionalTools, industryKnowledge, contacts } from "../utils";
 ---
 
-  <SideBar className={"w-[355px]"}>
-    <Avatar className="self-center" />
-    <Contacts contacts={contacts} />
-    <Tags tags={proffessionalTools} typeWriterText="<Инструменты />" />
-    <Tags tags={industryKnowledge} typeWriterText="<Знания />" />
-  </SideBar>  
+<SideBar className={"w-[355px]"}>
+  <Avatar className="self-center" />
+  <Contacts contacts={contacts} />
+  <Tags tags={proffessionalTools} typeWriterText="<Инструменты />" />
+  <Tags tags={industryKnowledge} typeWriterText="<Знания />" />
+</SideBar>
+
