@@ -13,7 +13,7 @@ const Tags: FC<TagsProps> = ({ tags, typeWriterText }) => (
         const randomIndexOfTheme = Math.floor(Math.random() * themes.length);
         const randomTheme = themes[randomIndexOfTheme];
         return (
-          <li>
+          <li key={item.text}>
             <Tag text={item.text} theme={randomTheme} srcLink={item.srcLink} />
           </li>
         );

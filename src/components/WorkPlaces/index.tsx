@@ -8,7 +8,7 @@ const WorkPlaces: FC<WorkPlacesProps> = ({ workPlaces }) => {
     <ul className="flex flex-col gap-4 w-[100%]">
       {workPlaces.map((item) => {
         return (
-          <li>
+          <li key={item.title}>
             <Card cardData={item} />
           </li>
         );
