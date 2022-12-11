@@ -1,5 +1,5 @@
 ---
-import { Contacts, SideBar, Tags, WorkPlaces } from "../components";
+import { Contacts, Tags, WorkPlaces } from "../components";
 import { SideBar } from "../components/SideBar";
 import Layout from "../layouts/Layout.astro";
 import { Avatar, Heading } from "../ui";
@@ -12,21 +12,22 @@ const avatarSrc =
 ---
 
 <Layout title="Welcome to Astro.">
-  <SideBar className={"w-[355px]"}>
+  <SideBar className={"w-[355px]  rounded-tr-[16px]"}>
     <Avatar avatarSrc={avatarSrc} className="self-center" />
+    <Heading title="Андрей Зайцев" subtitle="26 лет, Front-End Developer" />
     <Contacts contacts={contacts} />
     <Tags tags={proffessionalTools} typeWriterText="<Инструменты />" />
     <Tags tags={industryKnowledge} typeWriterText="<Знания />" />
   </SideBar>
-  <main class="flex items-start justify-start h-[100vh] flex-col p-10">
-    <section class="flex self-center mb-10">
-      <Heading title="Андрей Зайцев" subtitle="26 лет, Front-End Developer" />
-    </section>
+  <main
+    class="flex items-start justify-start h-[100vh] flex-col pl-10 pr-10 mt-[50px]"
+  >
     <section>
+      <h2 class="font-medium text-3xl mb-4">Опыт работы</h2>
       <WorkPlaces workPlaces={workPlaces} />
     </section>
   </main>
-  <SideBar className={"w-[250px]"}><Achievements /></SideBar>
+  <SideBar className={"w-[250px]  rounded-tl-[16px]"}><Achievements /></SideBar>
 </Layout>
 
 <style>
