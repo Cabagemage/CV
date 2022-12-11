@@ -1,4 +1,4 @@
-import SideBarBlockTitle from "../../ui/SideBarBlockTitle";
+import SideBarBlockTitle from "../../ui/SideBarBlockTitle/SideBarBlockTitle";
 
 import "./Achievements.css";
 

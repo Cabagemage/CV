@@ -1,9 +1,9 @@
 import type { FC } from "react";
 import type { ContactsProps } from "./Contacts.typedef";
-import Contact from "../../ui/Contact";
-import SideBarBlockTitle from "../../ui/SideBarBlockTitle";
+import Contact from "../../ui/Contact/Tag";
+import SideBarBlockTitle from "../../ui/SideBarBlockTitle/SideBarBlockTitle";
 
-export const Contacts: FC<ContactsProps> = ({ contacts }) => (
+const Contacts: FC<ContactsProps> = ({ contacts }) => (
   <div className="flex flex-col gap-4  justify-center items-start mt-8">
     <SideBarBlockTitle text="<Контакты />" />
     <div className="flex gap-4 flex-col w-[100%]">
@@ -19,3 +19,5 @@ export const Contacts: FC<ContactsProps> = ({ contacts }) => (
     </div>
   </div>
 );
+
+export default Contacts;

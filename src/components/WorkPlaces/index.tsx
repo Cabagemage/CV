@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import type { WorkPlacesProps } from "./WorkPlaces.typedef";
 
-import Card from "../../ui/Card";
+import Card from "../../ui/Card/Card";
 
 const WorkPlaces: FC<WorkPlacesProps> = ({ workPlaces }) => {
   return (

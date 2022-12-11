@@ -1,8 +1,8 @@
 import type { FC } from "react";
 import type { TagsProps } from "./Tags.typedef";
 import "./Tags.css";
-import SideBarBlockTitle from "../../ui/SideBarBlockTitle";
-import Tag from "../../ui/Tag";
+import SideBarBlockTitle from "../../ui/SideBarBlockTitle/SideBarBlockTitle";
+import Tag from "../../ui/Tag/Tag";
 import { themes } from "./Tags.data";
 
 const Tags: FC<TagsProps> = ({ tags, typeWriterText }) => (
