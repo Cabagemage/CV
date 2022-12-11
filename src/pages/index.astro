@@ -1,29 +1,18 @@
 ---
-import { Contacts, SideBar, Tags, WorkPlaces, SideBar } from "../components";
 import Layout from "../layouts/Layout.astro";
-import { Avatar, Heading } from "../ui";
-import { proffessionalTools, industryKnowledge } from "../utils";
-import { contacts } from "../components/Contacts/Contacts.data";
-import { workPlaces } from "../utils";
-import { Achievements } from "../components/Achievements";
+import LeftSidebBar from "../astro-components/left-sidebar.astro";
+import WorkPlaces from "../astro-components/work-places.astro";
+import RightSideBar from "../astro-components/right-sidebar.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <SideBar className={"w-[355px]"}>
-    <Avatar className="self-center" />
-    <Contacts contacts={contacts} />
-    <Tags tags={proffessionalTools} typeWriterText="<Инструменты />" />
-    <Tags tags={industryKnowledge} typeWriterText="<Знания />" />
-  </SideBar>
+  <LeftSidebBar />
   <main
     class="flex items-start justify-start h-[100vh] flex-col pl-10 pr-10 mt-[50px]"
   >
-    <section>
-      <h2 class="font-medium text-3xl mb-4">Опыт работы</h2>
-      <WorkPlaces workPlaces={workPlaces} />
-    </section>
+  <WorkPlaces />
   </main>
-  <SideBar className={"w-[250px]  rounded-tl-[16px]"}><Achievements /></SideBar>
+ <RightSideBar />
 </Layout>
 
 <style>
