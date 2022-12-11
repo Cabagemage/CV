@@ -14,11 +14,6 @@
   "isolatedModules": true,
   "jsx": "preserve",
   "incremental": true,
-  "baseUrl": ".",
-  "paths": {
-    "@ui/*": ["api/*"],
-    "@components/*": ["components/*"]
-  },
   "include": ["src", "**/*.ts", "**/*.tsx", "**/*.astro"],
   "compilerOptions": {
     "jsx": "react-jsx",
